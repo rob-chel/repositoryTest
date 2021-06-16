@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html xmlns: th="http://www.thymeleaf.org">
+<head>
+<meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, inizial-scale=1">
+  <link rel = "stylesheet" href = "/css/collezione.css"/>
+  <title>Collezione</title>
+</head>
+<body>
+<h1>Descrizione collezione</h1>
+<div th:object="${collezione}">
+<div class="bloc"><em class="hw">Nome collezione:</em><span th:text="${collezione.nome}"></span></div>
+<em class="hw">Nome curatore:</em><span th:text="${collezione.curatore.nome}"></span><br/>
+<ul>
+<div class="hr">
+<li th:each="opera : ${collezione.opere}">
+	<span>Titolo opera:</span><a th:href="@{'/opera' + '/' + ${opera.id}}" 
+	th:text="${opera.titolo}">Paolo Rossi</a>
+	<div id="flex-container"><img th:src="${opera.immagine}"/></div>
+	<span>Artista:</span><a th:href="@{'/artista' + '/' + ${opera.artista.id}}"
+	th:text="|${opera.artista.nome} ${opera.artista.cognome}|"></a><br/>
+</li>
+</div>
+</ul>
+
+</div>
+<footer th:replace="fragments/base.html :: fondo"></footer>
+</body>

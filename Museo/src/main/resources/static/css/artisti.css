@@ -1,0 +1,22 @@
+h1{
+  text-align:center;
+}
+
+span{
+  border:solid;
+  background-color: white;
+}
+
+body{
+  background-image:url(https://a.travel-assets.com/findyours-php/viewfinder/images/res40/194000/194770-share-image.jpg);
+}
+
+div{
+	text-align: center;
+}
+
+div.item{
+	text-align: center;
+	background-color: white;
+	
+}

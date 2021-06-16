@@ -1,0 +1,72 @@
+h1{
+  height:50px;
+  text-align: center;
+  color:black;
+}
+nav{
+  height:50px;
+  background-color: lightblue;
+  text-align: center;
+  border:solid;
+}
+
+body{
+  background-image: url(https://a.travel-assets.com/findyours-php/viewfinder/images/res40/194000/194770-share-image.jpg);
+
+}
+
+
+span{
+  border:solid;
+  background-color: lightblue;
+}
+
+
+
+#flex-container{
+  display:inline-flex;
+  height:200px;
+  width:50%;
+  background-color:black;
+  margin-left:25%;
+  margin-bottom:20px;
+  border:solid;
+  padding:10px;
+  justify-content:space-between;
+  
+}
+
+#flex-container1{
+  display:inline-flex;
+  height:200px;
+  width:50%;
+  background-color:black;
+  margin-left:25%;
+  border:solid;
+  padding:10px;
+  justify-content:space-between;
+}
+
+
+
+.col{
+  height:99%;
+  width:48%;
+  background-color:black;
+  flex-grow:1;
+  border:solid;
+}
+img{
+  height:200px;
+  width:300px;
+  
+}
+
+.item{
+  height:99%;
+  width:48%;
+  background-color:black;
+  flex-grow:1;
+  border:solid;
+  
+}

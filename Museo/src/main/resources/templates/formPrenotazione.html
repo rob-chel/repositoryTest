@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+   <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, inizial-scale=1">
+  <link rel = "stylesheet" href = "/css/formPrenotazione.css"/>
+  <title>formPrenotazione</title>
+ 
+</head>
+<body>
+	<header th:replace="fragments/base.html :: intestazione"></header>
+	<div>
+		<h4>Inserisci i dati</h4>
+	</div>
+	<div class="bt">
+	<form th:action="@{/prenotazione}" method="POST" th:object="${prenotazione}">
+		<div th:if="${#fields.hasGlobalErrors()}">
+  			<p th:each="err : ${#fields.globalErrors()}" th:text="${err}">...</p>
+		</div>		
+		<div>
+			<div>
+				<span class=col>Nome:</span>
+				<span><input type="text" th:field="*{nomeVisitatore}" /></span>
+				<span th:if="${#fields.hasErrors('nomeVisitatore')}" th:errors="*{nomeVisitatore}"></span>
+			</div><br/>		
+			<div>
+				<span class=col>Cognome:</span>
+				<span><input type="text" th:field="*{cognomeVisitatore}" /></span>
+				<span th:if="${#fields.hasErrors('cognomeVisitatore')}" th:errors="*{cognomeVisitatore}"></span>
+			</div><br/>
+			<div>
+			   <span class=col>Data:</span>
+			   <span><input type="date" th:field="*{data}" /></span>
+			</div><br/>
+			<span> Orario:</span><select type="text" th:field="*{orario}"> 
+              <option value="08:15" selected>08:15</option>
+              <option value="09:15">09:15</option>
+              <option value="10:15">10:15</option>
+              <option value="11:15">11:15</option>
+              <option value="12:15">12:15</option>
+              <option value="14:15">14:15</option>
+              </select>
+              <div id="flex-container"><img src="http://www.theartpostblog.com/wp-content/uploads/2016/05/louvre-ingresso.jpg"/> </div>
+			<div>
+				<span class=col><button type="submit">Invio</button></span>
+			</div><br/>
+		</div>
+	</form>
+	</div>
+	<br/>
+	<br/>
+	<footer th:replace="fragments/base.html :: fondo"></footer>
+</body>
+</html>

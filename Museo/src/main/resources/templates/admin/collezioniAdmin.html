@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, inizial-scale=1">
+  <link rel = "stylesheet" href = "/css/listaCollezione.css"/>
+  <title>Collezioni Museo</title>
+</head>
+<body>
+<h1>Ecco le collezioni del museo:</h1>
+<div>
+<ul>
+<div>
+			<li th:each="collezione : ${collezioni}">
+			<div class="ru">
+				<a  
+				   th:href="@{'/collezioneAdmin' + '/' + ${collezione.id}}" 
+				   th:text="${collezione.nome}">Paolo Rossi</a>
+				   <div><span>Descrizione:</span></div>
+				   <div class="hb" th:text="${collezione.descrizione}"><span> </span></div><br/>
+			</div><br/>
+			</li>
+</div>
+</ul>
+</div>
+<footer th:replace="fragments/base.html :: fondo"></footer> 
+</body>

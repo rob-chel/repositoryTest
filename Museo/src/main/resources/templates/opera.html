@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html xmlns: th="http://www.thymeleaf.org">
+<head>
+<meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, inizial-scale=1">
+  <link rel = "stylesheet" href = "/css/opera.css"/>
+  <title>Descrizione Opera</title>
+</head>
+<body>
+<h1>DESCRIZIONE OPERA</h1>
+<div th:object="${opera}">
+<em class="hw">Titolo:</em> <span th:text="*{titolo}">qui-va-nome</span><br/>
+<em class="hw">Artista:</em> <span> <a 
+                                  th:href="@{'/artista' + '/' + ${opera.artista.id}}"  
+                                  th:text="|${opera.artista.nome} ${opera.artista.cognome}|"></a></span> 
+<div id="flex-container"><img th:src="${opera.immagine}"/></div><br/>
+<em class="hw">Descrizione:</em> <section th:text="*{descrizione}"><span>qui-va-nome</span></section><br/>
+</div>
+<footer th:replace="fragments/base.html :: fondo"></footer>
+</body>

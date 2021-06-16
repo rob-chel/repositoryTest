@@ -1,0 +1,40 @@
+body{
+	text-align: center;
+	background-color: lightblue;
+}
+h1{
+	text-align: center;
+	border:solid;
+}
+div{
+	text-align: center;
+	
+}
+
+
+
+#flex-container{
+	display: flex;
+	width: 20%;
+	height: 200px;
+	border:solid;
+	flex-shrink: 1;
+	margin-left: 40%;
+	align-content: center;
+	background-color: black;
+	justify-content: center;
+}
+
+img{
+	width:100%;
+}
+li{
+	border: solid;
+}
+
+div.hr{
+	border:solid;
+	background-color: white;
+}
+
+

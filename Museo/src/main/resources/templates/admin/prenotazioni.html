@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head th:replace="fragments/base.html :: headerfiles(title=prenotazioni)"> </head>
+<body>
+	<h1>Prenotazioni</h1>
+	<div>
+		<ul>
+			<li th:each="prenotazione : ${prenotazioni}">
+				<span  
+				  th:href="@{'/prenotazione' + '/' + ${prenotazione.id}}" 
+				  th:text="|${prenotazione.nomeVisitatore} ${prenotazione.cognomeVisitatore} ${prenotazione.data} ${prenotazione.orario}|">Paolo Rossi</span><br/>
+			</li>
+		</ul>
+	</div>
+	<footer th:replace="fragments/base.html :: fondo"></footer>
+</body>
+</html>

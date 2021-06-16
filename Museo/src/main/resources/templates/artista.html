@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html xmlns: th="http://www.thymeleaf.org">
+<head>
+<meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, inizial-scale=1">
+  <link rel = "stylesheet" href = "/css/artista.css"/>
+  <title>Descrizione Artista</title>
+</head>
+<body>
+<h1>DESCRIZIONE ARTISTA</h1>
+<div th:object="${artista}">
+<em class="hw">Nome:</em> <span th:text="*{nome}">qui-va-nome</span><br/>
+<em class="hw">Cognome:</em> <span th:text="*{cognome}">qui-va-nome</span><br/>
+<em class="hw">Data di nascita:</em> <span th:text="*{dataNascita}">qui-va-nome</span><br/>
+<em class="hw">Luogo di nascita:</em> <span th:text="*{luogoNascita}">qui-va-nome</span><br/>
+<div th:if="${artista.dataMorte}" th:object="${artista}">
+<em class="hw">Data morte:</em> <span th:text="*{dataMorte}">qui-va-nome</span><br/>
+</div>
+<div th:unless="${artista}"></div>
+<div th:if="${artista.luogoMorte}" th:object="${artista}">
+<em class="hw">Luogo morte:</em> <span th:text="*{luogoMorte}">qui-va-nome</span><br/>
+</div>
+<div th:unless="${artista}"></div>
+<em class="hw">Nazionalita:</em> <span th:text="*{nazionalita}">qui-va-nome</span><br/>
+
+<em class="hw">Biografia:</em> <section th:text="*{biografia}"><span>qui-va-nome</span></section><br/>
+<em class="hw">Lista Opere:</em> 
+
+<ul>
+<li th:each="opera : ${artista.listaOpere}">
+	<span>Titolo:</span><a th:href="@{'/opera' + '/' + ${opera.id}}" 
+	th:text="${opera.titolo}">Paolo Rossi</a>
+	<div id="flex-container"><img th:src="${opera.immagine}"/></div>
+</li>
+</ul>
+
+</div>
+<footer th:replace="fragments/base.html :: fondo"></footer>
+</body>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+	<head th:replace="fragments/base.html :: headerfiles(title='SIW')"> </head>
+<body>
+	<h1>Lista operazioni Admin</h1>
+    <div>
+    	<h4 >Menu</h4>
+		<div>
+			<a th:href="@{/aggiungiOperaCollezione}">Aggiungi un opera in una collezione</a>
+   		</div>
+   		<div>
+			<a th:href="@{/rimuoviOperaCollezione}">Rimuovi un opera da una collezione</span>
+   		</div>
+        <div>
+            <a th:href="@{/elencoPrenotazioni}">Lista prenotazioni</a>
+        </div>
+   		<div>
+			<a th:href="@{/logout}">Logout</a>
+   		</div>
+    </div>
+    <footer th:replace="fragments/base.html :: fondo"></footer>
+</body>
+</html>
