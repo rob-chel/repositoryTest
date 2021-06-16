@@ -101,7 +101,7 @@ public class AdminController {
 	@RequestMapping(value="/elencoPrenotazioni",method = RequestMethod.GET)
 	public String elencoPrenotazioni(Model model) {
 		model.addAttribute("prenotazioni",prenService.tutti());
-		return "prenotazioni.html";
+		return "admin/prenotazioni.html";
 	}
 
 
