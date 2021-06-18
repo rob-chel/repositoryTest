@@ -1,0 +1,37 @@
+body{
+	text-align: center;
+	background-image: url(https://m.media-amazon.com/images/I/71WfCgw7JaL._AC_SX425_.jpg);
+}
+
+h1{
+	height:50px;
+}
+span{
+	border:solid;
+	background-color: white;
+	border-color: black;
+}
+nav{
+	height:50px;
+	border:solid;
+}
+
+
+section {
+  background-color: white;
+  margin: 75px 100px;
+  border:solid;
+  
+}
+
+#flex-container{
+  display:inline-flex;
+  height:400px;
+  width:50%;
+  background-color:black;
+  margin-bottom:20px;
+  border:solid;
+  padding:10px;
+  justify-content:center;
+  
+}

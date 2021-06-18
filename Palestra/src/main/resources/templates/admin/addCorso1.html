@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+	<head th:replace="fragments/base1.html :: headerfiles(pageTitle=#{page.title.addCorso})"> </head>
+	<body>
+	
+		
+	    
+	    <div class="container">
+	    	
+	    	<div class="bgorange bordered panel">
+		    	<h1>Aggiungi un Corso</h1>
+		    	
+		    	<form th:action="@{/admin/addCorso}" method="POST">
+                
+		    		<span class="loginFormFieldName" th:text="#{addCorso.nome}" />
+		    		<input type="text" class="loginFormFieldInput" th:field="${corso.nome}" th:attr="placeholder=#{addCorso.hint.nome}" required><br><br>
+		    		
+		    		<span class="loginFormFieldName" th:text="#{addCorso.orario}" />
+		    		<input type="text" class="loginFormFieldInput" th:field="${corso.orario}" th:attr="placeholder=#{addCorso.hint.orario}" required><br><br>
+		    		
+		    		<span class="loginFormFieldName" th:text="#{addCorso.descrizione}" />
+		    		<input type="text" class="loginFormFieldInput" th:field="${corso.descrizione}" th:attr="placeholder=#{addCorso.hint.descrizione}"><br><br>
+		    		
+		    		<span class="loginFormFieldName" th:text="#{addCorso.Sala}" />
+		    		<input type="number" class="loginFormFieldInput" th:field="${corso.sala.id}" th:attr="placeholder=#{addCorso.hint.Sala}" required><br><br>
+		    		
+		    		<span class="loginFormFieldName" th:text="#{addCorso.foto}" />
+		    		<input type="text" class="loginFormFieldInput" th:field="${corso.foto}" th:attr="placeholder=#{addCorso.hint.foto}"><br><br>
+		    		
+		    		
+		    		
+		    		<div class="buttonlist">
+						<button type="submit" class="btn" th:value="Registra">Registra</button>
+					</div>
+					
+		    	</form>
+	   		</div>
+			
+			<div th:replace="fragments/base1.html :: fondo" />
+	    </div>
+	    
+	</body>
+</html>

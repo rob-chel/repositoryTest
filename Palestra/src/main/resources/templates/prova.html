@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, inizial-scale=1">
+  <link rel = "stylesheet" href = "/css/prova.css"/>
+  <title>index</title>
+</head>
+<body>
+	<h1><span class="go">Benvenuto alla palestra Roma<span/></h1>
+    <div>
+    	<h4 th:text="#{header.index}">Welcome Page</h4>
+		<div>
+			<a th:href="@{/login}"><span class="go">Accedi</span></a>
+   		</div>
+		<div>
+			<a th:href="@{/register}"><span class="go">Registrati</span></a>
+   		</div><br/>
+    </div>
+    <footer th:replace="fragments/base.html :: fondo"></footer>
+</body>
+</html>

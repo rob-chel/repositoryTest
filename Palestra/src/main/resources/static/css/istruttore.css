@@ -1,0 +1,50 @@
+body{
+	text-align: center;
+	background-color: lightgrey;
+}
+h1{
+	text-align: center;
+	border:solid;
+	background-color: white;
+}
+div{
+	text-align: center;
+	
+}
+
+span.go{
+	border:solid;
+	background-color: white;
+	border-color: black;
+}
+
+
+footer {
+    border-top-style: outset;
+    margin-top: 2em;
+}
+
+
+
+#flex-container{
+	display: flex;
+	width: 20%;
+	height: 200px;
+	border:solid;
+	flex-shrink: 1;
+	margin-left: 40%;
+	align-content: center;
+	background-color: black;
+	justify-content: center;
+}
+
+img{
+	width:100%;
+}
+
+
+section{
+	border:solid;
+	background-color: white;
+}
+

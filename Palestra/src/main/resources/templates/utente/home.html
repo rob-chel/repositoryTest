@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+	<head th:replace="fragments/base.html :: headerfiles(title='SIW')"> </head>
+<body>
+	<h1><span class="go">Operazioni Utente</span></h1>
+    <div>
+    	<h4><span class="go">Menu</span></h4>
+		<div>
+			<a th:href="@{/prenotazione}"><span class="go">Prenota Corso</span></a>
+   		</div>
+   		<div>
+			<a th:href="@{/logout}"><span class="go">Logout</span></a>
+   		</div>
+   		
+    </div>
+    <footer th:replace="fragments/base.html :: fondo(home='/default')"></footer>
+</body>
+</html>

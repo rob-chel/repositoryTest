@@ -1,0 +1,59 @@
+header {
+    background: no-repeat left/cover url(/images/sea.jpeg);
+    display: flex;
+    height: 120px;
+    min-width: 120px;
+    align-items: center;
+    color: #fff;
+    text-shadow: #000 0 0 .2em;
+}
+
+div.to{
+	text-align: center;
+}
+
+footer {
+    border-top-style: outset;
+    margin-top: 2em;
+}
+	
+span.input {width: 30%;}
+
+body{
+	text-align: center;
+	align-content: center;
+	background-image: url(https://m.media-amazon.com/images/I/71WfCgw7JaL._AC_SX425_.jpg);
+}
+
+td.ft{
+	border:solid
+	
+}
+
+tr{
+	background-color: white;
+}
+
+h4{
+height:50px;
+text-align: center;
+color:black;	
+}
+
+h1{
+height:50px;
+text-align: center;
+color:black;
+
+}
+span.ro{
+	border:solid;
+	background-color: white;
+	border-color: black;
+}
+
+span.go{
+	border:solid;
+	background-color: white;
+	border-color: black;
+}

@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<<html xmlns:th="http://www.thymeleaf.org">
+<head th:replace="fragments/base.html :: headerfiles(title='SuccessOperation')"> </head>
+<body>
+<h1>Corso aggiunto con successo</h1>
+
+
+<a th:href="@{/login}">
+<button class="btn" type="button" value="torna indietro">Torna nell'Area Privata</button>
+</a>
+</div>
+<div th:replace="fragments/base.html :: fondo" />
+</div>
+</body>
+</html>

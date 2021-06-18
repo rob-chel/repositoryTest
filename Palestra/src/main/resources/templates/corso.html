@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html xmlns: th="http://www.thymeleaf.org">
+<head>
+<meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, inizial-scale=1">
+  <link rel = "stylesheet" href = "/css/corso.css"/>
+  <title>Panoramica Corso</title>
+</head>
+<body>
+<h1>Panoramica Corso</h1>
+<div th:object="${corso}">
+<em class="hw">Nome:</em> <span th:text="*{nome}">qui-va-nome</span><br/>
+<div th:if="${corso.istruttore}" th:object="${istruttore}">
+<em class="hw">Istruttore:</em> <span> <a 
+                                  th:href="@{'/istruttore' + '/' + ${corso.istruttore.id}}"  
+                                  th:text="|${corso.istruttore.nome} ${corso.istruttore.cognome}|"></a></span>
+</div>
+ <div th:unless="${istruttore}"></div> 
+<div id="flex-container"><img th:src="${corso.foto}"/></div><br/>
+<em class="hw">Descrizione:</em> <section th:text="*{descrizione}"><span>qui-va-nome</span></section><br/>
+</div>
+<footer>
+<a th:href="@{/}"><span class="go">Home</span></a>
+</footer>
+</body>

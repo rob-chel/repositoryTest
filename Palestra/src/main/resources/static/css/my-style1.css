@@ -1,0 +1,84 @@
+
+.bgwhite{
+	background-color: white;
+}
+
+.bgorange{
+	background-color: white;
+}
+
+
+.bordered{
+	border: 2px solid black;
+}
+
+.container{
+	/*flex: auto;*/
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	padding-top: 6%;
+	vertical-align: middle;
+}
+
+.panel{
+	padding: 2%;
+	justify-content: space-between;
+	text-align: center;
+}
+
+.btn {
+	color: black;
+	background-color: white;
+	padding: 8px;
+	font-size: 18;
+	border-radius: 10%;
+	margin-top: 12%;
+}
+
+.btn:focus {
+	color: white;
+	background-color: white;
+	font-size: 18;
+}
+
+.buttonlist{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+}
+
+.footer {
+    border-top-style: outset;
+    margin-top: 2em;
+}
+
+.btnSort{
+	color: black;
+	background-color: white;
+	padding: 8px;
+	font-size: 18;
+	border-radius: 10%;
+	margin-bottom: 2%;
+	padding: 2%;
+}
+
+.loginFormFieldName {
+	font-style: italic;
+	font-size: 14px;
+	padding-right: 6px;
+}
+
+.loginFormFieldInput {
+	font-style: italic;
+	font-size: 14px;
+	padding-right: 6px;
+	width: 100%;
+}
+
+body{
+	background-color: lightgray;
+}
+

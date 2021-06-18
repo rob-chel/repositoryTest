@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, inizial-scale=1">
+  <link rel = "stylesheet" href = "/css/istruttori.css"/>
+  <title>Istruttori della palestra</title>
+</head>
+<body>
+<h1><span class="go">Istruttori della palestra:</span></h1>
+<div>
+<ul>
+<div>
+<li th:each="istruttore : ${istruttori}">
+<div class="ru">
+<a  
+ th:href="@{'/istruttore' + '/' + ${istruttore.id}}" 
+ th:text="|${istruttore.nome} ${istruttore.cognome}|">Paolo Rossi</a>
+ <div id="flex-container"><img th:src="${istruttore.foto}"/></div>
+            <div><span>Descrizione:</span></div>
+				   <div class="hb" th:text="${istruttore.descrizione}"><span> </span></div><br/>
+			<div><span>Corso tenuto:</span></div>
+				   <div class="hb" th:text="${istruttore.corso.nome}"><span> </span></div><br/>
+			</div><br/>
+			</li>
+</div>
+</ul>
+</div>
+<footer>
+<a th:href="@{/}"><span class="go">Home</span></a>
+</footer> 
+</body>
